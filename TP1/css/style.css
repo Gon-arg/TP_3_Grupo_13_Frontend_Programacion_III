@@ -1,0 +1,196 @@
+/*RESET*/
+/* con esto mantenemos el diseño consistente en todos los navegadores */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* VARIABLES Y ESTILOS GENERALES */
+/* Definimos variables para los colores del sitio, lo que facilita su mantenimiento y cambios futuros */
+:root{
+    --color-fondo:#1a1a2e;
+    --color-header:#16213e;
+    --color-acento:#7F77DD;
+    --color-texto:#ffffff;
+    --color-texto-secundario:#aaaaaa;
+
+    --space-xs: 4px;
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 24px;
+    --space-xl: 32px;
+    --space-xxl: 48px;
+}
+
+/*GENERAL*/
+/*definimos estilos generales para el cuerpo del documento, incluyendo el fondo, el color del texto y la tipografía */
+body {
+    background-color:var(--color-fondo);
+    color:var(--color-texto);
+    font-family:Arial,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+}
+
+/*HEADER*/
+/*definimos estilos para el encabezado del sitio, incluyendo el fondo, el padding y un borde inferior para separar visualmente el encabezado del contenido principal */
+header {
+    background-color:var(--color-header);
+    padding:16px 32px;
+    border-bottom:2px solid var(--color-acento);
+}
+
+header h1 {
+    color:var(--color-acento);
+    font-size: 24px;
+}
+
+/*NAV DENTRO DEL HEADER*/
+/*definimos estilos para la barra de navegación, incluyendo el fondo, el padding y los estilos para los enlaces dentro de la barra de navegación. También se incluyen estilos para el estado hover de los enlaces para mejorar la interactividad del sitio */
+nav {
+    background-color:var(--color-header);
+    padding:8px 32px;
+}
+
+/* Estilos para la lista de navegación, eliminando los puntos de la lista y utilizando flexbox para distribuir los elementos de manera horizontal con un espacio entre ellos */
+nav ul {
+    list-style:none;
+    display:flex;
+    gap:24px;
+}
+
+nav ul li a {
+    color:var(--color-texto);
+    text-decoration:none;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    color:var(--color-acento);
+}
+
+/*MAIN*/
+main {
+    padding:var(--space-xl);
+}
+
+/*ESTILO PAGE DE EQUIPO*/
+.equipo-container {
+    padding: 3em;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap:5em;
+}
+
+.equipo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+}
+
+.equipo-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.equipo-item p {
+    font-size: 16px;
+}
+
+.equipo-item img {
+    width: 100%;
+    max-width: 280px;
+    border: 5px solid var(--color-acento);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 8px;
+}
+
+/*ESTILOS PARA HOJA DE PREGUNTAS FRECUENTES*/
+.contenedorpreguntas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-l);
+    max-width: 1100px;
+    margin: var(--space-l) auto 0;
+}
+
+.cuadro-pregunta {
+    background-color: var(--color-header);
+    border: 1px solid rgba(127, 119, 221, 0.35);
+    border-left: 4px solid var(--color-acento);
+    border-radius: 12px;
+    padding: var(--space-l) var(--space-xl);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+}
+
+
+
+.cuadro-pregunta h2 {
+    color: var(--color-acento);
+    font-size: 1.125rem;
+    line-height: 1.35;
+    margin-bottom: var(--space-m);
+    font-weight: 700;
+}
+
+.cuadro-pregunta p {
+    color: var(--color-texto-secundario);
+    margin: 0;
+    line-height: 1.65;
+}
+/*FOOTER*/
+/*definimos estilos para el pie de página, incluyendo el fondo, el color del texto, la alineación del texto, el padding y un borde superior para separar visualmente el pie de página del contenido principal. También se incluye un margen superior para crear espacio entre el contenido principal y el pie de página */
+footer {
+    background-color:var(--color-header);
+    color:var(--color-texto-secundario);
+    text-align:center;
+    padding:var(--space-m) var(--space-l);
+    border-top:2px solid var(--color-acento);
+    margin-top:var(--space-l);
+}
+
+/* SERVICIOS - BOX MODEL */
+.servicio-card {
+    /* Borde solicitado en el enunciado */
+    border: 1px solid var(--color-acento);
+    
+    /* Padding: espacio interno para que el texto no toque el borde */
+    padding: var(--space-l);
+    
+    /* Margin: espacio externo para separar una tarjeta de otra */
+    margin-bottom: var(--space-l);
+    
+    /* Fondo y estetica */
+    background-color: var(--color-header);
+    border-radius: 8px;
+}
+
+/* Estilo para las imagenes dentro de las tarjetas */
+.servicio-card img {
+    width: 100%;       /* Para que se adapte al ancho de la tarjeta */
+    max-width: 400px;  /* Para que no se haga gigante */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--space-m);
+    display: block;
+}
+
+/* Estilo para los titulos y precios dentro de la tarjeta */
+.servicio-card h3 {
+    color: var(--color-acento);
+    margin-bottom: var(--space-s);
+}
+
+.servicio-card p {
+    margin-bottom: var(--space-s);
+}
