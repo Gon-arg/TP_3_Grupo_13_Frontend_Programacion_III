@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="description" content="PixelStore, tu tienda online de videojuegos. Encontrá los mejores juegos y accesorios para gamers." />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>PixelStore - Inicio</title>
+    <title>PixelStore - Servicios</title>
   </head>
   <body>
 
@@ -18,39 +18,33 @@
           <li><a href="./pedido.html">Realizar pedido</a></li>
           <li><a href="./contacto.html">Contacto</a></li>
           <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="./perfil_usuario.html">Perfil</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section> 
-        <h2>Nuestros servicios Gamers</h2>
+<main>
+  <section class="page-section servicios-section">
+    <h2>Nuestros servicios Gamers</h2>
+    <div class="actions-row">
+      <button class="btn btn-primary" type="button" onclick="getServicios()">Ver todos los servicios</button>
+      <div class="search-row">
+        <input class="input-search" type="number" id="buscar-id" placeholder="Buscar por ID" min="1" />
+        <button class="btn btn-secondary" type="button" onclick="verDetalle(document.getElementById('buscar-id').value)">Buscar</button>
+      </div>
+    </div>
 
-        <div class="servicio-card">
-          <img src="../assets/img/consola.jpg" alt="Venta de consolas">
-          <h3>Venta de consolas</h3>
-          <p>Lo último en PlayStation, Xbox y Nintendo con garantía oficial.</p> 
-          <p><strong>Precio:</strong> Desde $500.000</p>
-        </div>
-        
-        <div class="servicio-card">
-          <img src="../assets/img/tecnico.jpg" alt="Servicio Tecnico">
-            <h3>Soporte tecnico</h3>
-            <p>Reparación de joysticks, limpieza de consolas y optimización de PC.</p>
-        </div>
-        
-        <div class="servicio-card">
-          <img src="../assets/img/cotizacion.jpg" alt="Cotizacion de equipos">
-            <h3>Cotización de equipos</h3>
-            <p>Te ayudamos a armar tu presupuesto personalizado para tu próxima PC Gamer o renovación de setup.</p>
-        </div>
-      </section>
-
-    </main>
+    <p id="cargando" class="status-text hidden">Cargando...</p>
+    <div id="servicios-container" class="servicios-grid"></div>
+    <div id="detalle-container" class="detalle-container"></div>
+  </section>
+</main>
 
     <footer>
       <p> 2026 PixelStore </p>
     </footer>
 
+    <script src="../js/servicios.js"></script>
   </body>
 </html>
