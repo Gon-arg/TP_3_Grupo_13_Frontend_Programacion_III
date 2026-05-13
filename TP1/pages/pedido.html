@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="PixelStore, tu tienda online de videojuegos. Encontrá los mejores juegos y accesorios para gamers." />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>PixelStore - Inicio</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>PixelStore</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./servicios.html">Servicios</a></li>
+          <li><a href="./equipo.html">Equipo</a></li>
+          <li><a href="./pedido.html">Realizar pedido</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      
+        <section>
+            <h1>Realizar tu pedido aqui</h1>
+            <p>Realiza tu pedido sobre tu juego favorito, en tu consola favorita.</p>
+            <form style="width: 800px; height: 550px; padding: 50px; border: 5px solid blue; margin: 20px; background-color: rgb(130, 118, 238);" action="/destino" method="POST">
+                <label style="margin: 200px 20px 200px 200px" for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br>
+                <label style="margin: 200px 20px 200px 200px" for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label style="margin: 200px 20px 200px 200px" for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <br>               
+                <label style="margin: 200px 20px 200px 200px" for="provincia">Provincia:</label>
+                <select id="provincia" name="provincia">
+                   <option value="ba">Buenos Aires</option>
+                   <option value="sf">Santa Fe</option>
+                   <option value="cd">Cordoba</option>
+                   <option value="md">Mendoza</option>
+                </select>
+                <br>
+                <label style="margin: 200px 20px 200px 200px" for="solicitud">Tipo de solicitud:</label>
+                <select id="solicitud" name="solicitud">
+                   <option value="cotizacion">Cotizacion de equipo</option>
+                   <option value="venta">Venta de juegos</option>
+                   <option value="arreglo">Arreglo de equipos</option>
+                </select>
+                <br>
+                <label style="margin: 200px 20px 200px 200px" for="date">Fecha de solicitud:</label>
+                <input type="date" id="date" name="date" required>
+                <br>
+                <div style="margin: 2px 200px">
+                    <label for="radio">Turno para retiros</label>
+                    <input type="radio" id="radio1" name="radio" value="opcion1">
+                    <label for="radio1">Mañana</label>
+                    <input type="radio" id="radio2" name="radio" value="opcion2">
+                    <label for="radio2">Tarde</label>
+                </div>
+                <br>
+                <label style="margin: 200px 2px 200px 200px" for="resena">Dejanos mas detalles de tu pedido</label><br>
+                <textarea style="margin: 5px 20px 0px 200px; width: 400px; height: 150px;"  id="resena" name="resena"placeholder="Escribi tu opinion aca..."></textarea>
+                <br>
+                <br>
+  
+                <button style="margin: 2px 2px 0px 200px; width: 100px; height: 20px;" type="submit">Enviar</button> 
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+      <p> 2026 PixelStore </p>
+    </footer>
+
+  </body>
+</html>
