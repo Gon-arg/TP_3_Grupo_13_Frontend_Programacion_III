@@ -1,13 +1,10 @@
-/*RESET*/
-/* con esto mantenemos el diseño consistente en todos los navegadores */
+
 * {
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* VARIABLES Y ESTILOS GENERALES */
-/* Definimos variables para los colores del sitio, lo que facilita su mantenimiento y cambios futuros */
 :root{
     --color-fondo:#1a1a2e;
     --color-header:#16213e;
@@ -23,8 +20,6 @@
     --space-xxl: 48px;
 }
 
-/*GENERAL*/
-/*definimos estilos generales para el cuerpo del documento, incluyendo el fondo, el color del texto y la tipografía */
 body {
     background-color:var(--color-fondo);
     color:var(--color-texto);
@@ -33,8 +28,6 @@ body {
     line-height:1.6;
 }
 
-/*HEADER*/
-/*definimos estilos para el encabezado del sitio, incluyendo el fondo, el padding y un borde inferior para separar visualmente el encabezado del contenido principal */
 header {
     background-color:var(--color-header);
     padding:16px 32px;
@@ -46,14 +39,11 @@ header h1 {
     font-size: 24px;
 }
 
-/*NAV DENTRO DEL HEADER*/
-/*definimos estilos para la barra de navegación, incluyendo el fondo, el padding y los estilos para los enlaces dentro de la barra de navegación. También se incluyen estilos para el estado hover de los enlaces para mejorar la interactividad del sitio */
 nav {
     background-color:var(--color-header);
     padding:8px 32px;
 }
 
-/* Estilos para la lista de navegación, eliminando los puntos de la lista y utilizando flexbox para distribuir los elementos de manera horizontal con un espacio entre ellos */
 nav ul {
     list-style:none;
     display:flex;
@@ -149,7 +139,6 @@ main {
     line-height: 1.65;
 }
 /*FOOTER*/
-/*definimos estilos para el pie de página, incluyendo el fondo, el color del texto, la alineación del texto, el padding y un borde superior para separar visualmente el pie de página del contenido principal. También se incluye un margen superior para crear espacio entre el contenido principal y el pie de página */
 footer {
     background-color:var(--color-header);
     color:var(--color-texto-secundario);
@@ -161,18 +150,138 @@ footer {
 
 /* SERVICIOS - BOX MODEL */
 .servicio-card {
-    /* Borde solicitado en el enunciado */
     border: 1px solid var(--color-acento);
     
-    /* Padding: espacio interno para que el texto no toque el borde */
     padding: var(--space-l);
     
-    /* Margin: espacio externo para separar una tarjeta de otra */
     margin-bottom: var(--space-l);
     
-    /* Fondo y estetica */
     background-color: var(--color-header);
     border-radius: 8px;
+}
+
+.contact-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--space-l);
+}
+
+.contact-form {
+    background-color: rgba(130, 118, 238, 0.12);
+    border: 3px solid var(--color-acento);
+    border-radius: 16px;
+    padding: 32px;
+    display: grid;
+    gap: var(--space-l);
+}
+
+.contact-group {
+    display: grid;
+    gap: var(--space-s);
+}
+
+.contact-group label {
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background-color: rgba(255,255,255,0.08);
+    color: var(--color-texto);
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    outline: 2px solid var(--color-acento);
+    background-color: rgba(255,255,255,0.12);
+}
+
+.contact-textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+}
+
+.contact-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--color-texto);
+    background-color: var(--color-acento);
+    transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #6659c6;
+}
+
+.contact-button--secondary {
+    background-color: transparent;
+    border: 1px solid var(--color-acento);
+}
+
+.contact-button--secondary:hover {
+    background-color: rgba(127, 119, 221, 0.16);
+}
+
+.form-card {
+    display: grid;
+    gap: var(--space-m);
+    padding: var(--space-l);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.form-group {
+    display: grid;
+    gap: var(--space-s);
+}
+
+.form-group label,
+.form-group p {
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-texto);
+}
+
+.form-control:focus {
+    outline: 2px solid var(--color-acento);
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--space-s);
+}
+
+.form-control[type="date"] {
+    max-width: 240px;
+}
+
+.form-card label input[type="radio"] {
+    margin-right: var(--space-s);
 }
 
 /* Estilo para las imagenes dentro de las tarjetas */
@@ -193,4 +302,145 @@ footer {
 
 .servicio-card p {
     margin-bottom: var(--space-s);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.page-section {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(127, 119, 221, 0.35);
+    border-radius: 18px;
+    padding: var(--space-xl);
+    margin: var(--space-l) auto;
+    max-width: 980px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.page-section h2 {
+    color: var(--color-acento);
+    margin-bottom: var(--space-m);
+}
+
+.form-card {
+    display: grid;
+    gap: var(--space-m);
+    padding: var(--space-l);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.form-group {
+    display: grid;
+    gap: var(--space-s);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-texto);
+}
+
+.form-control:focus {
+    outline: 2px solid var(--color-acento);
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 0.9rem 1.4rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    color: var(--color-texto);
+    background-color: var(--color-acento);
+}
+
+.btn-secondary {
+    color: var(--color-texto);
+    background-color: transparent;
+    border: 1px solid var(--color-acento);
+}
+
+.actions-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    align-items: center;
+    margin-bottom: var(--space-m);
+}
+
+.search-row {
+    display: flex;
+    gap: var(--space-s);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.input-search {
+    width: 160px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-texto);
+}
+
+.status-text {
+    color: var(--color-texto-secundario);
+    margin-bottom: var(--space-m);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-m);
+    margin-top: var(--space-m);
+}
+
+.detalle-container {
+    margin-top: var(--space-m);
+    padding: var(--space-l);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.profile-card-container {
+    margin-top: var(--space-m);
+    display: grid;
+    gap: var(--space-m);
+}
+
+.perfil-card {
+    display: grid;
+    gap: var(--space-s);
+    padding: var(--space-l);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.perfil-card img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.perfil-card h3 {
+    color: var(--color-acento);
 }
