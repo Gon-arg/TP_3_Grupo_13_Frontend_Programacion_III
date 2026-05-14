@@ -1,4 +1,4 @@
-const URL_API = 'https://tp-3-grupo-13-backend-programacion-iii.onrender.com/'
+const URL_API = 'http://localhost:3000'
 
 const form = document.querySelector('#login-form')
 
@@ -9,10 +9,10 @@ form.addEventListener('submit', async (e) => {
   const password = document.querySelector('#password').value
 
   try {
-    const response = await fetch(`${URL_API}/login`, {
+    const response = await fetch(`${URL_API}/login`, {  
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ usuario, password })
+      body: JSON.stringify({ email: usuario, password })
     })
 
     if (response.ok) {
