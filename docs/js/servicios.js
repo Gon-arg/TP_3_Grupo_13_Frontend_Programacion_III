@@ -1,4 +1,4 @@
-const URL_API = 'http://localhost:3000'
+const URL_API = 'https://tp-3-grupo-13-backend-programacion-iii.onrender.com/'
 
 const servicios = [
   { id: 1, imagen: 'joystick.png', nombre: 'Reparación de Joysticks', descripcion: 'Servicio completo de reparación y mantenimiento de joysticks para consolas.', categoria: 'Reparación', precio: 15000 },

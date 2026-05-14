@@ -1,4 +1,4 @@
-const URL_API = 'http://localhost:3000'
+const URL_API = 'https://tp-3-grupo-13-backend-programacion-iii.onrender.com/'
 
 const getEquipo = async () => {
   try {
