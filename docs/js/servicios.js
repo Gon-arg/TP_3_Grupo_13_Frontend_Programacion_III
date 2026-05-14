@@ -2,11 +2,11 @@ const URL_API = 'https://tp-3-grupo-13-backend-programacion-iii.onrender.com/'
 
 const servicios = [
   { id: 1, imagen: 'joystick.png', nombre: 'Reparación de Joysticks', descripcion: 'Servicio completo de reparación y mantenimiento de joysticks para consolas.', categoria: 'Reparación', precio: 15000 },
-  { id: 2, imagen: 'limpieza.PNG', nombre: 'Limpieza de Consolas', descripcion: 'Limpieza profunda y mantenimiento preventivo para consolas de videojuegos.', categoria: 'Mantenimiento', precio: 8000 },
+  { id: 2, imagen: 'limpieza.png', nombre: 'Limpieza de Consolas', descripcion: 'Limpieza profunda y mantenimiento preventivo para consolas de videojuegos.', categoria: 'Mantenimiento', precio: 8000 },
   { id: 3, imagen: 'pasta.png', nombre: 'Cambio de Pasta Térmica', descripcion: 'Reemplazo de pasta térmica para optimizar el rendimiento de tu PC gaming.', categoria: 'Mantenimiento', precio: 5000 },
-  { id: 4, imagen: 'pcalta.PNG', nombre: 'Armado de PC Alta Gama', descripcion: 'Armado personalizado de PC gaming de alta performance con componentes premium.', categoria: 'Armado', precio: 250000 },
-  { id: 5, imagen: 'pcbasica.PNG', nombre: 'Armado de PC Básica', descripcion: 'Armado de PC gaming básica para principiantes con componentes esenciales.', categoria: 'Armado', precio: 120000 },
-  { id: 6, imagen: 'pcmedia.PNG', nombre: 'Armado de PC Media Gama', descripcion: 'Armado equilibrado de PC gaming con buena relación precio-rendimiento.', categoria: 'Armado', precio: 180000 },
+  { id: 4, imagen: 'pcalta.png', nombre: 'Armado de PC Alta Gama', descripcion: 'Armado personalizado de PC gaming de alta performance con componentes premium.', categoria: 'Armado', precio: 250000 },
+  { id: 5, imagen: 'pcbasica.png', nombre: 'Armado de PC Básica', descripcion: 'Armado de PC gaming básica para principiantes con componentes esenciales.', categoria: 'Armado', precio: 120000 },
+  { id: 6, imagen: 'pcmedia.png', nombre: 'Armado de PC Media Gama', descripcion: 'Armado equilibrado de PC gaming con buena relación precio-rendimiento.', categoria: 'Armado', precio: 180000 },
   { id: 7, imagen: 'ps4.webp', nombre: 'Reparación PS4', descripcion: 'Reparación especializada de consolas PlayStation 4.', categoria: 'Reparación', precio: 20000 },
   { id: 8, imagen: 'ps5.png', nombre: 'Reparación PS5', descripcion: 'Servicio técnico autorizado para consolas PlayStation 5.', categoria: 'Reparación', precio: 30000 },
   { id: 9, imagen: 'reparacion.png', nombre: 'Reparación General', descripcion: 'Reparación de diversos dispositivos gaming y accesorios.', categoria: 'Reparación', precio: 0 },
@@ -21,8 +21,8 @@ const getServicios = async () => {
   try {
     document.getElementById('cargando').style.display = 'block'
     document.getElementById('detalle-container').innerHTML = ''
-    // const res = await fetch(`${URL_API}/servicios`)
-    // const servicios = await res.json()
+    const res = await fetch(`${URL_API}/servicios`)
+    const servicios = await res.json()
     document.getElementById('cargando').style.display = 'none'
     const container = document.getElementById('servicios-container')
 
