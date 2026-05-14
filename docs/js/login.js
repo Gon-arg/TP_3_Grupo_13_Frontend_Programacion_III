@@ -1,4 +1,4 @@
-const URL_API = 'https://tp-3-grupo-13-backend-programacion-iii.onrender.com/'
+const URL_API = 'https://tp-3-grupo-13-backend-programacion-iii.onrender.com'
 
 const form = document.querySelector('#login-form')
 
@@ -18,7 +18,12 @@ form.addEventListener('submit', async (e) => {
     if (response.ok) {
       const perfil = await response.json()
       console.log('Login correcto:', perfil)
-      sessionStorage.setItem('usuarioId', perfil.id)
+
+      const usuarioId = perfil.id || perfil._id || perfil.usuarioId || perfil.userId || perfil.usuario?.id || perfil.usuario?._id
+      if (usuarioId) {
+        sessionStorage.setItem('usuarioId', usuarioId)
+      }
+      sessionStorage.setItem('usuarioData', JSON.stringify(perfil))
       window.location.href = './perfil_usuario.html'
     } else {
       alert('Usuario o contraseña incorrectos')

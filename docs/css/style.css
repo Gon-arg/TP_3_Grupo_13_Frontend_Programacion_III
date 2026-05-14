@@ -67,12 +67,10 @@ main {
 
 /*ESTILO PAGE DE EQUIPO*/
 .equipo-container {
-    padding: 3em;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
-    gap:5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-m);
 }
 
 .equipo-item {
@@ -321,34 +319,6 @@ footer {
 .page-section h2 {
     color: var(--color-acento);
     margin-bottom: var(--space-m);
-}
-
-.form-card {
-    display: grid;
-    gap: var(--space-m);
-    padding: var(--space-l);
-    background-color: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-}
-
-.form-group {
-    display: grid;
-    gap: var(--space-s);
-}
-
-.form-control {
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    background-color: rgba(255, 255, 255, 0.08);
-    color: var(--color-texto);
-}
-
-.form-control:focus {
-    outline: 2px solid var(--color-acento);
-    background-color: rgba(255, 255, 255, 0.12);
 }
 
 .btn {
