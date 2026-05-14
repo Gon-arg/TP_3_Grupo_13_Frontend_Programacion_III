@@ -5,14 +5,19 @@ const form = document.querySelector('#login-form')
 form.addEventListener('submit', async (e) => {
   e.preventDefault()
 
-  const usuario = document.querySelector('#usuario').value
+  const usuario = document.querySelector('#usuario').value.trim()
   const password = document.querySelector('#password').value
 
   try {
-    const response = await fetch(`${URL_API}/login`, {  
+    const response = await fetch(`${URL_API}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: usuario, password })
+      body: JSON.stringify({
+        email: usuario,
+        username: usuario,
+        usuario,
+        password
+      })
     })
 
     if (response.ok) {
