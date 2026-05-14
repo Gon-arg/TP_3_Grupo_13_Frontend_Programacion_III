@@ -1,8 +1,6 @@
 const URL_API = 'https://tp-3-grupo-13-backend-programacion-iii.onrender.com/'
 
 const equipo = [
-  { foto: 'carlos.png', nombre: 'Carlos García', rol: 'Desarrollador Frontend', email: 'carlos@pixelstore.com' },
-  { foto: 'sofia.png', nombre: 'Sofía López', rol: 'Diseñadora UX/UI', email: 'sofia@pixelstore.com' },
   { foto: 'equipo1.png', nombre: 'Juan Pérez', rol: 'Desarrollador Backend', email: 'juan@pixelstore.com' },
   { foto: 'equipo2.png', nombre: 'Ana Martínez', rol: 'Tester QA', email: 'ana@pixelstore.com' },
   { foto: 'equipo3.png', nombre: 'Miguel Rodríguez', rol: 'DevOps Engineer', email: 'miguel@pixelstore.com' },
@@ -14,15 +12,10 @@ const getEquipo = async () => {
   try {
     document.getElementById('cargando').style.display = 'block'
 
-    // Simular fetch con datos locales
-    // const res = await fetch(`${URL_API}/equipo`)
-    // const equipo = await res.json()
-
     document.getElementById('cargando').style.display = 'none'
 
     const container = document.getElementById('equipo-container')
 
-    // 🔥 ESTO ES CLAVE
     container.innerHTML = ''
 
     equipo.forEach(m => {
