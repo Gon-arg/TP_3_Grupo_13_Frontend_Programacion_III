@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="description" content="PixelStore, tu tienda online de videojuegos. Encontrá los mejores juegos y accesorios para gamers." />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>PixelStore - Inicio</title>
+    <title>PixelStore - Pedido</title>
   </head>
   <body>
 
@@ -18,59 +18,64 @@
           <li><a href="./pedido.html">Realizar pedido</a></li>
           <li><a href="./contacto.html">Contacto</a></li>
           <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="./perfil_usuario.html">Perfil</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      
-        <section>
-            <h1>Realizar tu pedido aqui</h1>
-            <p>Realiza tu pedido sobre tu juego favorito, en tu consola favorita.</p>
-            <form style="width: 800px; height: 550px; padding: 50px; border: 5px solid blue; margin: 20px; background-color: rgb(130, 118, 238);" action="/destino" method="POST">
-                <label style="margin: 200px 20px 200px 200px" for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <br>
-                <label style="margin: 200px 20px 200px 200px" for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label style="margin: 200px 20px 200px 200px" for="telefono">Telefono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
-                <br>               
-                <label style="margin: 200px 20px 200px 200px" for="provincia">Provincia:</label>
-                <select id="provincia" name="provincia">
-                   <option value="ba">Buenos Aires</option>
-                   <option value="sf">Santa Fe</option>
-                   <option value="cd">Cordoba</option>
-                   <option value="md">Mendoza</option>
-                </select>
-                <br>
-                <label style="margin: 200px 20px 200px 200px" for="solicitud">Tipo de solicitud:</label>
-                <select id="solicitud" name="solicitud">
-                   <option value="cotizacion">Cotizacion de equipo</option>
-                   <option value="venta">Venta de juegos</option>
-                   <option value="arreglo">Arreglo de equipos</option>
-                </select>
-                <br>
-                <label style="margin: 200px 20px 200px 200px" for="date">Fecha de solicitud:</label>
-                <input type="date" id="date" name="date" required>
-                <br>
-                <div style="margin: 2px 200px">
-                    <label for="radio">Turno para retiros</label>
-                    <input type="radio" id="radio1" name="radio" value="opcion1">
-                    <label for="radio1">Mañana</label>
-                    <input type="radio" id="radio2" name="radio" value="opcion2">
-                    <label for="radio2">Tarde</label>
-                </div>
-                <br>
-                <label style="margin: 200px 2px 200px 200px" for="resena">Dejanos mas detalles de tu pedido</label><br>
-                <textarea style="margin: 5px 20px 0px 200px; width: 400px; height: 150px;"  id="resena" name="resena"placeholder="Escribi tu opinion aca..."></textarea>
-                <br>
-                <br>
-  
-                <button style="margin: 2px 2px 0px 200px; width: 100px; height: 20px;" type="submit">Enviar</button> 
-            </form>
-        </section>
+      <section class="page-section form-section">
+        <h2>Realizar tu pedido aquí</h2>
+        <p>Realiza tu pedido sobre tu juego favorito, en tu consola favorita.</p>
+        <form class="form-card" action="/destino" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input class="form-control" type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input class="form-control" type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input class="form-control" type="tel" id="telefono" name="telefono" required>
+          </div>
+          <div class="form-group">
+            <label for="provincia">Provincia:</label>
+            <select class="form-control" id="provincia" name="provincia">
+              <option value="ba">Buenos Aires</option>
+              <option value="sf">Santa Fe</option>
+              <option value="cd">Cordoba</option>
+              <option value="md">Mendoza</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="solicitud">Tipo de solicitud:</label>
+            <select class="form-control" id="solicitud" name="solicitud">
+              <option value="cotizacion">Cotizacion de equipo</option>
+              <option value="venta">Venta de juegos</option>
+              <option value="arreglo">Arreglo de equipos</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Fecha de solicitud:</label>
+            <input class="form-control" type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <p>Turno para retiros</p>
+            <label><input type="radio" name="radio" value="opcion1"> Mañana</label>
+            <label><input type="radio" name="radio" value="opcion2"> Tarde</label>
+          </div>
+          <div class="form-group">
+            <label for="resena">Dejanos mas detalles de tu pedido</label>
+            <textarea class="form-control" id="resena" name="resena" placeholder="Escribi tu opinion aca..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
 
     </main>
 
