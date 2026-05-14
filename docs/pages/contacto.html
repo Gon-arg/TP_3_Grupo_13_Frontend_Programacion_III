@@ -18,32 +18,38 @@
           <li><a href="./pedido.html">Realizar pedido</a></li>
           <li><a href="./contacto.html">Contacto</a></li>
           <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="./perfil_usuario.html">Perfil</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       
-         <section>
+         <section class="contact-section">
             <h1>Contactanos</h1>
             <p>Contactanos para mas informacion o consultas.</p>
-            <form style="width: 800px; height: 550px; padding: 50px; border: 5px solid blue; margin: 20px; background-color: rgb(130, 118, 238);" action="/destino" method="POST">
-                <label style="margin: 200px 20px 200px 200px" for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <br>
-                <label style="margin: 200px 20px 200px 200px" for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
-                <br>
-                <label style="margin: 200px 20px 200px 200px" for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label style="margin: 200px 2px 200px 200px" for="mensaje">Dejanos mas detalles de tu consulta</label><br>
-                <textarea style="margin: 5px 20px 0px 200px; width: 400px; height: 150px;"  id="mensaje" name="mensaje"placeholder="Escribi tu opinion aca..."></textarea>
-                <br>
-                <br>
-                <button style="margin: 2px 2px 0px 200px; width: 100px; height: 20px;" type="submit">Enviar</button> 
-                <br>
-                <button style="margin: 2px 2px 0px 200px; width: 100px; height: 20px;" type="reset">Resetear</button> 
+            <form class="contact-form" action="/destino" method="POST">
+                <div class="contact-group">
+                    <label for="nombre">Nombre:</label>
+                    <input class="contact-input" type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="contact-group">
+                    <label for="apellido">Apellido:</label>
+                    <input class="contact-input" type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="contact-group">
+                    <label for="email">Email:</label>
+                    <input class="contact-input" type="email" id="email" name="email" required>
+                </div>
+                <div class="contact-group">
+                    <label for="mensaje">Dejanos mas detalles de tu consulta</label>
+                    <textarea class="contact-textarea" id="mensaje" name="mensaje" placeholder="Escribi tu opinion aca..."></textarea>
+                </div>
+                <div class="contact-actions">
+                    <button class="contact-button" type="submit">Enviar</button>
+                    <button class="contact-button contact-button--secondary" type="reset">Resetear</button>
+                </div>
             </form>
         </section>
 
