@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="PixelStore, tu tienda online de videojuegos. Encontrá los mejores juegos y accesorios para gamers." />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>PixelStore - Servicios</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>PixelStore</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./servicios.html">Servicios</a></li>
+          <li><a href="./equipo.html">Equipo</a></li>
+          <li><a href="./pedido.html">Realizar pedido</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="./perfil_usuario.html">Perfil</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<main>
+  <section class="page-section servicios-section">
+    <h2>Nuestros servicios Gamers</h2>
+    <div class="actions-row">
+      <button class="btn btn-primary" type="button" onclick="getServicios()">Ver todos los servicios</button>
+      <div class="search-row">
+        <input class="input-search" type="number" id="buscar-id" placeholder="Buscar por ID" min="1" />
+        <button class="btn btn-secondary" type="button" onclick="verDetalle(document.getElementById('buscar-id').value)">Buscar</button>
+      </div>
+    </div>
+
+    <p id="cargando" class="status-text hidden">Cargando...</p>
+    <div id="servicios-container" class="servicios-grid"></div>
+    <div id="detalle-container" class="detalle-container"></div>
+  </section>
+</main>
+
+    <footer>
+      <p> 2026 PixelStore </p>
+    </footer>
+
+    <script src="../js/servicios.js"></script>
+  </body>
+</html>
