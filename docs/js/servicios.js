@@ -21,13 +21,22 @@ const getServicios = async () => {
   try {
     document.getElementById('cargando').style.display = 'block'
     document.getElementById('detalle-container').innerHTML = ''
-    const res = await fetch(`${URL_API}/servicios`)
-    const servicios = await res.json()
+
+    const res = await fetch(`${URL_API}servicios`)  
+    const data = await res.json()
+
+    console.log('Respuesta:', data) 
+
+    const servicios = Array.isArray(data) ? data : data.servicios ?? data.data ?? []
+
     document.getElementById('cargando').style.display = 'none'
     const container = document.getElementById('servicios-container')
-
-   
     container.innerHTML = ''
+
+    if (servicios.length === 0) {
+      container.textContent = 'No hay servicios disponibles.'
+      return
+    }
 
     servicios.forEach(s => {
       const card = document.createElement('div')
